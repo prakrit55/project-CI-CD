@@ -32,6 +32,7 @@ spec:
                   //withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
                    //sh "mvn clean package"
                   //  }
+                  sh './chmod +x mvnw'
                   sh './mvnw clean package' 
                    //sh 'mvn clean package'
                 }
