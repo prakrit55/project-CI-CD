@@ -7,7 +7,7 @@ spec:
   - host: {{ .Values.ingress.host }}
     http:
       paths:
-      - path: /
+      - path: /javaApplication
         pathType: Prefix
         backend:
           service:
