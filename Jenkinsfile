@@ -78,7 +78,7 @@ spec:
           container('build') {
                 stage('Deploy Artifacts') {
                     rtMavenRun (
-                    tool: "java", // Tool name from Jenkins configuration
+                    tool: "java11", // Tool name from Jenkins configuration
                     useWrapper: true,
                     pom: 'pom.xml',
                     goals: 'clean install',
