@@ -61,15 +61,15 @@ spec:
                 rtMavenDeployer (
                     id: "MAVEN_DEPLOYER",
                     serverId: "jfrog",
-                    releaseRepo: "libs-release-local",
-                    snapshotRepo: "libs-release-local"
+                    releaseRepo: "etccompany-libs-release-local",
+                    snapshotRepo: "etccompany-libs-release-local"
                 )
 
                 rtMavenResolver (
                     id: "MAVEN_RESOLVER",
                     serverId: "jfrog",
-                    releaseRepo: "libs-release",
-                    snapshotRepo: "libs-release"
+                    releaseRepo: "etccompany-libs-release",
+                    snapshotRepo: "etccompany-libs-release"
                 )            
                 }
             }
