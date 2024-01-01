@@ -5,7 +5,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    app: build
+    name: build
   annotations:
     sidecar.istio.io/inject: "false"
 spec:
