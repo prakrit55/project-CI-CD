@@ -1,4 +1,4 @@
-def label = "jenkinsagent"
+def label = "build"
 def mvn_version = 'M2'
 podTemplate(label: label, yaml: """
 apiVersion: v1
@@ -54,7 +54,7 @@ spec:
                 stage('Artifactory configuration') {
                     rtServer (
                     id: "jfrog",
-                    url: "https://etccompany.jfrog.io/",
+                    url: "https://etccompany.jfrog.io/artifactory/",
                     credentialsId: "jfrog"
                 )
 
