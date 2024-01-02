@@ -54,7 +54,7 @@ spec:
                 stage('Artifactory configuration') {
                     rtServer (
                     id: "jfrog",
-                    url: "https://etccompany.jfrog.io/artifactory",
+                    url: "https://etccompany.jfrog.io/",
                     credentialsId: "jfrog"
                 )
 
