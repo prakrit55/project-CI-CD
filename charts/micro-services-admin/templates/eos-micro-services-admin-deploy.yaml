@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: eos-micro-services-admin
-        image: docker.io/dpthub/eos-micro-services-admin:latest
+        image: docker.io/prakrit55/etccompany-micro-services-admin:latest
         ports:
         - containerPort: 8090
