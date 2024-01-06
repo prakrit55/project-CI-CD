@@ -24,7 +24,7 @@
 //       path: /var/run/docker.sock
 // """
 // ) 
-{
+// {
     node (label) {
         stage ('Checkout SCM'){
           git credentialsId: 'git', url: 'https://github.com/prakrit55/project-CI-CD.git', branch: 'main'
