@@ -1,30 +1,29 @@
-// def label = "build"
-// def mvn_version = 'M2'
-// podTemplate(label: label, yaml: """
-// apiVersion: v1
-// kind: Pod
-// metadata:
-//   labels:
-//     name: build
-//   annotations:
-//     sidecar.istio.io/inject: "false"
-// spec:
-//   containers:
-//   - name: build
-//     image: prakrit55/jenkinsagent
-//     command:
-//     - cat
-//     tty: true
-//     volumeMounts:
-//     - name: dockersock
-//       mountPath: /var/run/docker.sock
-//   volumes:
-//   - name: dockersock
-//     hostPath:
-//       path: /var/run/docker.sock
-// """
-// ) 
-// {
+def label = "build"
+def mvn_version = 'M2'
+podTemplate(label: label, yaml: """
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    name: build
+  annotations:
+    sidecar.istio.io/inject: "false"
+spec:
+  containers:
+  - name: build
+    image: prakrit55/jenkinsagent
+    command:
+    - cat
+    tty: true
+    volumeMounts:
+    - name: dockersock
+      mountPath: /var/run/docker.sock
+  volumes:
+  - name: dockersock
+    hostPath:
+      path: /var/run/docker.sock
+"""
+) {
     node (label) {
         stage ('Checkout SCM'){
           git credentialsId: 'git', url: 'https://github.com/prakrit55/project-CI-CD.git', branch: 'main'
